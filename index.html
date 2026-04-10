@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeClutter | Instant order from digital chaos</title>
-    <meta name="description" content="A blazing-fast, pure-Python Windows desktop application that instantly organizes chaotic folders using a fully localized AI engine.">
+    <meta name="description"
+        content="A blazing-fast, pure-Python Windows desktop application that instantly organizes chaotic folders using a fully localized AI engine.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 
 
-    <!-- Hero Section: Parchment -->
     <header class="section hero parse-section">
         <div class="container text-center">
             <div class="logo-centered reveal-fade">DeClutter</div>
             <h1 class="display-hero reveal-text">Instant order from digital chaos.</h1>
             <p class="body-large subtitle reveal-text-delay">
-                Tired of messy folders and scattered downloads? DeClutter instantly names and organizes your files into neat, logical folders with a simple right-click. Works completely offline to keep your files secure and private.
+                Tired of messy folders and scattered downloads? DeClutter instantly names and organizes your files into
+                neat, logical folders with a simple right-click. Works completely offline to keep your files secure and
+                private.
             </p>
             <div class="hero-actions reveal-fade">
-                <a href="#" class="btn btn-primary btn-lg" id="btn-spawn-1">Download for Windows</a>
+                <a href="#" class="btn btn-primary btn-lg download-btn" id="btn-spawn-1">Download for Windows</a>
                 <a href="#how-it-works" class="btn btn-secondary btn-lg" id="btn-spawn-2">See how it works</a>
             </div>
 
             <div class="merged-animation-area">
                 <div class="falling-files">
-                    <div class="file" data-target="docs"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png" alt="📄" class="emoji-icon"> file_001.pdf</div>
-                    <div class="file" data-target="photos"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png" alt="🖼️" class="emoji-icon"> DSC_099.jpg</div>
-                    <div class="file" data-target="code"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Snake/3D/snake_3d.png" alt="🐍" class="emoji-icon"> script.py</div>
-                    <div class="file" data-target="docs"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png" alt="📄" class="emoji-icon"> resume_v3.pdf</div>
-                    <div class="file" data-target="photos"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png" alt="🖼️" class="emoji-icon"> screenshot.png</div>
-                    <div class="file" data-target="code"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Package/3D/package_3d.png" alt="📦" class="emoji-icon"> styles.css</div>
-                    <div class="file" data-target="docs"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Bar%20chart/3D/bar_chart_3d.png" alt="📊" class="emoji-icon"> Q1_Taxes.xlsx</div>
-                    <div class="file" data-target="photos"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png" alt="🖼️" class="emoji-icon"> IMG_9122.heic</div>
-                    <div class="file" data-target="code"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Laptop/3D/laptop_3d.png" alt="💻" class="emoji-icon"> app.tsx</div>
-                    <div class="file" data-target="docs"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Memo/3D/memo_3d.png" alt="📝" class="emoji-icon"> notes.txt</div>
-                    <div class="file" data-target="docs"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png" alt="📄" class="emoji-icon"> invoice_49.pdf</div>
-                    <div class="file" data-target="code"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Snake/3D/snake_3d.png" alt="🐍" class="emoji-icon"> utils.py</div>
+                    <div class="file" data-target="docs"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png"
+                            alt="📄" class="emoji-icon"> file_001.pdf</div>
+                    <div class="file" data-target="photos"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png"
+                            alt="🖼️" class="emoji-icon"> DSC_099.jpg</div>
+                    <div class="file" data-target="code"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Snake/3D/snake_3d.png"
+                            alt="🐍" class="emoji-icon"> script.py</div>
+                    <div class="file" data-target="docs"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png"
+                            alt="📄" class="emoji-icon"> resume_v3.pdf</div>
+                    <div class="file" data-target="photos"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png"
+                            alt="🖼️" class="emoji-icon"> screenshot.png</div>
+                    <div class="file" data-target="code"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Package/3D/package_3d.png"
+                            alt="📦" class="emoji-icon"> styles.css</div>
+                    <div class="file" data-target="docs"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Bar%20chart/3D/bar_chart_3d.png"
+                            alt="📊" class="emoji-icon"> Q1_Taxes.xlsx</div>
+                    <div class="file" data-target="photos"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Framed%20picture/3D/framed_picture_3d.png"
+                            alt="🖼️" class="emoji-icon"> IMG_9122.heic</div>
+                    <div class="file" data-target="code"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Laptop/3D/laptop_3d.png"
+                            alt="💻" class="emoji-icon"> app.tsx</div>
+                    <div class="file" data-target="docs"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Memo/3D/memo_3d.png"
+                            alt="📝" class="emoji-icon"> notes.txt</div>
+                    <div class="file" data-target="docs"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Page%20facing%20up/3D/page_facing_up_3d.png"
+                            alt="📄" class="emoji-icon"> invoice_49.pdf</div>
+                    <div class="file" data-target="code"><img
+                            src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Snake/3D/snake_3d.png"
+                            alt="🐍" class="emoji-icon"> utils.py</div>
                 </div>
                 <div class="folders-row">
                     <div class="folder" id="folder-docs">
-                        <div class="folder-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png" alt="📁" class="emoji-icon folder-emoji"></div>
+                        <div class="folder-icon"><img
+                                src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png"
+                                alt="📁" class="emoji-icon folder-emoji"></div>
                         <div class="folder-name">Documents</div>
                         <div class="folder-count">0 items sorted</div>
                     </div>
                     <div class="folder" id="folder-photos">
-                        <div class="folder-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png" alt="📁" class="emoji-icon folder-emoji"></div>
+                        <div class="folder-icon"><img
+                                src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png"
+                                alt="📁" class="emoji-icon folder-emoji"></div>
                         <div class="folder-name">Photos</div>
                         <div class="folder-count">0 items sorted</div>
                     </div>
                     <div class="folder" id="folder-code">
-                        <div class="folder-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png" alt="📁" class="emoji-icon folder-emoji"></div>
+                        <div class="folder-icon"><img
+                                src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/File%20folder/3D/file_folder_3d.png"
+                                alt="📁" class="emoji-icon folder-emoji"></div>
                         <div class="folder-name">Projects</div>
                         <div class="folder-count">0 items sorted</div>
                     </div>
@@ -63,33 +98,38 @@
         </div>
     </header>
 
-    <!-- Animation section removed and merged into hero -->
 
-    <!-- Engine section removed -->
-
-    <!-- Why it's special Section: Crisp Secondary Background -->
     <section id="features" class="section" style="background-color: var(--bg-main);">
         <div class="container text-center section-header reveal-fade" style="margin-bottom: 64px;">
             <h2 class="section-heading">Why DeClutter is different</h2>
         </div>
-        
+
         <div class="container stats-grid">
             <div class="card reveal-up">
-                <span class="card-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/High%20voltage/3D/high_voltage_3d.png" alt="⚡" class="emoji-icon card-emoji"></span>
+                <span class="card-icon"><img
+                        src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/High%20voltage/3D/high_voltage_3d.png"
+                        alt="⚡" class="emoji-icon card-emoji"></span>
                 <h3 class="sub-heading">Zero-Latency</h3>
-                <p class="body-standard">Processes over 200 files in under 1 second. Built purely in Python, bypassing hefty ML bloat up-front. No loading screens.</p>
+                <p class="body-standard">Processes over 200 files in under 1 second. Built purely in Python, bypassing
+                    hefty ML bloat up-front. No loading screens.</p>
             </div>
-            
+
             <div class="card reveal-up" style="transition-delay: 100ms">
-                <span class="card-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Locked/3D/locked_3d.png" alt="🔒" class="emoji-icon card-emoji"></span>
+                <span class="card-icon"><img
+                        src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Locked/3D/locked_3d.png"
+                        alt="🔒" class="emoji-icon card-emoji"></span>
                 <h3 class="sub-heading">100% Private</h3>
-                <p class="body-standard">Your documents stay on your machine. Financial invoices and proprietary data are analyzed strictly via localized silicon processing.</p>
+                <p class="body-standard">Your documents stay on your machine. Financial invoices and proprietary data
+                    are analyzed strictly via localized silicon processing.</p>
             </div>
-            
+
             <div class="card reveal-up" style="transition-delay: 200ms">
-                <span class="card-icon"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Right%20arrow%20curving%20left/3D/right_arrow_curving_left_3d.png" alt="↩️" class="emoji-icon card-emoji"></span>
+                <span class="card-icon"><img
+                        src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Right%20arrow%20curving%20left/3D/right_arrow_curving_left_3d.png"
+                        alt="↩️" class="emoji-icon card-emoji"></span>
                 <h3 class="sub-heading">State Rollback</h3>
-                <p class="body-standard">Made a mistake? A full native state-rollback exists. Click one button to revert hundreds of altered files back exactly as they were.</p>
+                <p class="body-standard">Made a mistake? A full native state-rollback exists. Click one button to revert
+                    hundreds of altered files back exactly as they were.</p>
             </div>
         </div>
     </section>
@@ -101,41 +141,46 @@
                 <h2 class="section-heading" style="margin-top: 0;">Loved by messy desktop owners</h2>
             </div>
             <div class="stats-grid">
-                 <div class="card reveal-up" style="display: flex; flex-direction: column; text-align: left;">
-                     <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
-                     <p class="body-standard" style="flex-grow: 1;">"It's like magic. My downloads folder went from a black hole to perfectly organized in seconds."</p>
-                     <div class="testimonial-author mt-4">
-                         <img src="assets/avatar_alex.png" alt="Alex P." class="author-avatar">
-                         <div class="author-info">
-                             <p class="author-name">Alex P.</p>
-                             <p class="author-role">Developer</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card reveal-up" style="display: flex; flex-direction: column; text-align: left; transition-delay: 100ms">
-                     <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
-                     <p class="body-standard" style="flex-grow: 1;">"I had over 3,000 files on my desktop. DeClutter sorted everything logically. Total lifesaver."</p>
-                     <div class="testimonial-author mt-4">
-                         <img src="assets/avatar_sarah.png" alt="Sarah J." class="author-avatar">
-                         <div class="author-info">
-                             <p class="author-name">Sarah J.</p>
-                             <p class="author-role">Designer</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card reveal-up" style="display: flex; flex-direction: column; text-align: left; transition-delay: 200ms">
-                     <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
-                     <p class="body-standard" style="flex-grow: 1;">"Fast, completely private, and insanely accurate. Best productivity tool I've used this year."</p>
-                     <div class="testimonial-author mt-4">
-                         <img src="assets/avatar_mark.png" alt="Mark T." class="author-avatar">
-                         <div class="author-info">
-                             <p class="author-name">Mark T.</p>
-                             <p class="author-role">Data Analyst</p>
-                         </div>
-                     </div>
-                 </div>
+                <div class="card reveal-up" style="display: flex; flex-direction: column; text-align: left;">
+                    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
+                    <p class="body-standard" style="flex-grow: 1;">"It's like magic. My downloads folder went from a
+                        black hole to perfectly organized in seconds."</p>
+                    <div class="testimonial-author mt-4">
+                        <img src="assets/avatar_alex.png" alt="Alex P." class="author-avatar">
+                        <div class="author-info">
+                            <p class="author-name">Alex P.</p>
+                            <p class="author-role">Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card reveal-up"
+                    style="display: flex; flex-direction: column; text-align: left; transition-delay: 100ms">
+                    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
+                    <p class="body-standard" style="flex-grow: 1;">"I had over 3,000 files on my desktop. DeClutter
+                        sorted everything logically. Total lifesaver."</p>
+                    <div class="testimonial-author mt-4">
+                        <img src="assets/avatar_sarah.png" alt="Sarah J." class="author-avatar">
+                        <div class="author-info">
+                            <p class="author-name">Sarah J.</p>
+                            <p class="author-role">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card reveal-up"
+                    style="display: flex; flex-direction: column; text-align: left; transition-delay: 200ms">
+                    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 12px; letter-spacing: 2px;">★★★★★</div>
+                    <p class="body-standard" style="flex-grow: 1;">"Fast, completely private, and insanely accurate.
+                        Best productivity tool I've used this year."</p>
+                    <div class="testimonial-author mt-4">
+                        <img src="assets/avatar_mark.png" alt="Mark T." class="author-avatar">
+                        <div class="author-info">
+                            <p class="author-name">Mark T.</p>
+                            <p class="author-role">Data Analyst</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="massive-stat reveal-up">
                 <div class="stat-number"><span id="live-count">8,402,488</span></div>
                 <div class="stat-label">Files Organized & Counting</div>
@@ -152,23 +197,37 @@
             <div class="faq-accordion mw-700 mx-auto reveal-up">
                 <div class="faq-item">
                     <button class="faq-question">Does it delete my files? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p>No, DeClutter never deletes anything. It only moves and renames files into organized folders.</p></div>
+                    <div class="faq-answer">
+                        <p>No, DeClutter never deletes anything. It only moves and renames files into organized folders.
+                        </p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Is it Safe? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p>Yes, 100% local. DeClutter works entirely offline on your machine. Your files never leave your computer.</p></div>
+                    <div class="faq-answer">
+                        <p>Yes, 100% local. DeClutter works entirely offline on your machine. Your files never leave
+                            your computer.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Can I undo? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p>Yes, anytime. A single click lets you roll back the last organization change if you don't like the result.</p></div>
+                    <div class="faq-answer">
+                        <p>Yes, anytime. A single click lets you roll back the last organization change if you don't
+                            like the result.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Why is it free? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p>Because I love seeing people use my stuff. Giving back to the community is priority number one.</p></div>
+                    <div class="faq-answer">
+                        <p>Because I love seeing people use my stuff. Giving back to the community is priority number
+                            one.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                     <button class="faq-question">What's the catch? <span class="faq-icon">+</span></button>
-                     <div class="faq-answer"><p>No catch, genuinely. No ads, no tracking, just a simple tool doing what it promises.</p></div>
+                    <button class="faq-question">What's the catch? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>No catch, genuinely. No ads, no tracking, just a simple tool doing what it promises.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,16 +237,46 @@
         <div class="container text-center">
             <h2 class="display-hero">End the visual noise.</h2>
             <div class="footer-cta">
-                <a href="#" class="btn btn-primary btn-lg">Get DeClutter Now</a>
+                <a href="#" class="btn btn-primary btn-lg download-btn">Get DeClutter Now</a>
             </div>
             <div class="footer-socials mt-4 element-glow">
-                <a href="#" class="social-link" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Bird/3D/bird_3d.png" alt="Twitter" class="emoji-icon"> Twitter</a>
-                <a href="#" class="social-link" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Alien%20monster/3D/alien_monster_3d.png" alt="GitHub" class="emoji-icon"> GitHub</a>
+                <a href="#" class="social-link" title="Twitter"><img
+                        src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Bird/3D/bird_3d.png"
+                        alt="Twitter" class="emoji-icon"> Twitter</a>
+                <a href="#" class="social-link" title="GitHub"><img
+                        src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Alien%20monster/3D/alien_monster_3d.png"
+                        alt="GitHub" class="emoji-icon"> GitHub</a>
             </div>
             <p class="body-small dark-text-muted mt-4">For Windows 10 & 11 • Right-click integration ready</p>
         </div>
     </footer>
 
+    <div id="download-modal" class="modal-overlay">
+        <div class="modal-content text-center">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div class="modal-icon"><img
+                    src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Party%20popper/3D/party_popper_3d.png"
+                    alt="🎉" class="emoji-icon"></div>
+            <h3 class="section-heading" style="font-size: 28px; margin-bottom: 16px;">You're about to get organized!
+            </h3>
+            <p class="body-standard" style="margin-bottom: 24px;">Your DeClutter download is starting... Building your
+                zero-latency binaries for maximum sorting speed.</p>
+            <div class="product-hunt-callout">
+                <p class="body-standard" style="margin-bottom: 16px; font-weight: 600;">While you wait, we'd love your
+                    support!</p>
+                <div style="margin-bottom: 12px; font-size: 40px; color: #DA552F;">&#9650;</div>
+                <p class="body-small" style="margin-bottom: 24px;">Help us reach more messy desktop owners by giving us
+                    an upvote on Product Hunt.</p>
+                <a href="https://www.producthunt.com/" target="_blank" class="btn btn-primary btn-full ph-btn"
+                    style="background-color: #DA552F;">
+                    <img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets/Orange%20heart/3D/orange_heart_3d.png"
+                        alt="🧡" class="emoji-icon" style="margin-right: 8px;"> Upvote on Product Hunt
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -184,20 +184,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Realistic Live Counter
     const counterEl = document.getElementById('live-count');
     if (counterEl) {
-        let count = 8402488; // Starting number based on user update
+        // Use the current epoch time to create a globally synchronized and ever-growing base number.
+        // This ensures the count doesn't reset on refresh and stays realistic across all devices.
+        // Anchor set to approx April 10, 2026 to start calculating from 80k right now.
+        const baseEpoch = 1775840000000; 
+        const elapsedSinceAnchor = Math.max(0, Date.now() - baseEpoch);
+        
+        // Start with the initial baseline + (elapsed milliseconds * approx ~3.8 files/sec globally)
+        let count = 80000 + Math.floor(elapsedSinceAnchor * 0.0038);
+        
+        // Render initial sync count immediately
+        counterEl.innerText = count.toLocaleString();
         
         const updateCounter = () => {
-            // Randomly increase between 1 and 8 files to simulate real network bursts
-            const increment = Math.floor(Math.random() * 8) + 1;
+            // Randomly increase between 1 and 4 files to simulate real network bursts visually
+            const increment = Math.floor(Math.random() * 4) + 1;
             count += increment;
             counterEl.innerText = count.toLocaleString();
             
             // Randomly determine delay. Simulates organic traffic bursts vs slow periods
+            // Average growth matches the ~3.8 global files/sec sync rate.
             const nextUpdateDelay = Math.random() < 0.2 ? Math.random() * 2500 + 1000 : Math.random() * 300 + 100;
             setTimeout(updateCounter, nextUpdateDelay);
         };
         
         // Start after slight delay on load
         setTimeout(updateCounter, 800);
+    }
+
+    // Modal Logic
+    const downloadBtns = document.querySelectorAll('.download-btn');
+    const modal = document.getElementById('download-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    if (modal && closeModal) {
+        downloadBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('show');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
     }
 });
