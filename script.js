@@ -212,27 +212,4 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(updateCounter, 800);
     }
 
-    // Modal Logic
-    const downloadBtns = document.querySelectorAll('.download-btn');
-    const modal = document.getElementById('download-modal');
-    const closeModal = document.getElementById('close-modal');
-
-    if (modal && closeModal) {
-        downloadBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.add('show');
-            });
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('show');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('show');
-            }
-        });
-    }
 });
